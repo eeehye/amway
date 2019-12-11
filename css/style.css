@@ -1,0 +1,321 @@
+/* 초기화 */
+*{margin: 0; padding: 0}
+ul{list-style-type: none;}
+body{font-family: 'Noto Sans KR', sans-serif; font-size: 16px; margin: 0 auto;}
+a{text-decoration: none;}
+
+/* 헤더 */
+#main_header{
+    position: fixed;
+    height: 64px;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+    background: rgba(0,47,95,1);
+    /* overflow: hidden; */
+
+}
+/* 네비게이션 */
+#main_gnb {
+    position: relative;
+    /* outline: 1px solid red; */
+    width: 1200px;
+    background: rgba(0,47,95,1);
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+  /* 1단계 메뉴 */
+  #main_gnb > .depth1 > li {
+    float: left;
+    text-align: center;
+    width: 20%;
+    line-height: 30px;
+    z-index: 999;
+  }
+  #main_gnb > .depth1 > li > a {
+    padding-bottom: 1px;
+    display: inline-block;
+    width: 130px;
+    font-size: 17px;
+    color: white;
+    transition-duration: 0.2s;
+    border-bottom: 2px solid #002f5f;
+    padding-bottom: 12px;
+  }
+  #main_gnb > .depth1 > li > .a_img{
+    padding-bottom: 7.5px;
+  }
+  #main_gnb > .depth1 > li:hover > .a_img{
+    border-bottom: 2px solid #002f5f;
+  }
+  #main_gnb > .depth1 > li:hover > a{
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+  }
+  
+  /* 2단계 메뉴 */
+  #main_gnb .depth2.show {
+    background: rgba(0,47,95,1);
+    padding-top: 15px;
+    width: 100%;
+    height: 130px;
+    /* overflow: hidden; */
+    z-index: 999;
+    /* outline: 1px solid green; */
+  }
+  
+  #main_gnb .depth2{
+    height: 0px;
+    overflow: hidden;
+    transition-duration: 0.4s;
+  }
+  
+  #main_gnb .depth2 a {
+    /* outline: 1px solid red; */
+    display: block;
+    color: white;
+    font-size: 13px;
+    z-index: 999
+  }
+  #main_gnb .depth2 a:hover {
+    color: #db2340;
+  }
+
+
+/* 동영상 */
+.media video{
+    margin-top: 60px;
+    width: 100%;
+    /* background: #ccc; */
+    margin-bottom: 100px;
+}
+
+/* 회사소개 */
+#company_bg{
+  background-image: url('../images/company_bg3.jpg');
+  width: 100%;
+  height: 1200px;
+  background-size: cover;
+  margin-bottom: 100px;
+  min-width: 1596px;
+}
+#company_bg > h1{
+  opacity: 0;
+}
+#company_info{
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+#company_info > .company{
+  position: absolute;
+  z-index: 99;
+  top: 250px;
+}
+#company_info > .company > .company_p{
+  position: absolute;
+  left: 100px;
+  color: #fff;
+  width: 960px;
+  font-size: 22px;
+  text-align: center;
+}
+#company_info .c_button{
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid #fff;
+  transition-duration: 0.2s;
+  top: 345px;
+  left: 500px;
+}
+#company_info .c_button > a{
+  display: block;
+  color: #fff;
+}
+#company_info .c_button:hover{
+  background: #000;
+}
+#company_info .c_button:hover > a{
+  color: white;
+}
+
+
+/* 이미지 */
+.c_imgs{
+  width: 1200px;
+  margin: 0 auto;
+  position: absolute;
+  top: 500px;
+  left: 15px;
+}
+.c_imgs div{
+  float: left;
+  opacity: 0.8;
+  margin: 2px 5px;
+}
+.c_imgs > div:nth-of-type(1) img,
+.c_imgs > div:nth-of-type(3) img,
+.c_imgs > div:nth-of-type(5) img{
+  border-radius: 20px 20px 0 20px
+}
+.c_imgs > div:nth-of-type(2) img,
+.c_imgs > div:nth-of-type(4) img,
+.c_imgs > div:nth-of-type(6) img{
+  border-radius: 20px 20px 20px 0px;
+}
+.c_imgs > div:nth-of-type(7) img,
+.c_imgs > div:nth-of-type(9) img,
+.c_imgs > div:nth-of-type(11) img{
+  border-radius: 20px 0 20px 20px
+}
+.c_imgs > div:nth-of-type(8) img,
+.c_imgs > div:nth-of-type(10) img,
+.c_imgs > div:nth-of-type(12) img{
+  border-radius: 0 20px 20px 20px
+}
+
+/* 제품 소개 */
+#product_bg{
+  background-image: url('../images/bg_product2.png');
+  width: 100%;
+  height: 1200px;
+  background-size: cover;
+  margin-bottom: 100px;
+}
+#product_bg > h1{
+  opacity: 0;
+}
+#product_info{
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+#product_info > .product{
+  position: absolute;
+  z-index: 99;
+  top: 100px;
+}
+#product_info > .product > .product_p{
+  position: absolute;
+  width: 960px;
+  text-align: center;
+  top: 100px;
+  left: 120px;
+  color: white;
+}
+#product_info > .product > .product_p > h1{
+  font-size: 55px;
+  padding-bottom: 35px;
+}
+#product_info > .product > .product_p > p{
+  font-size: 22px;
+}
+#product_info > .product > .product_img{
+  position: absolute;
+  top: 550px;
+  left: 380px;
+}
+#product_info .p_button{
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid #fff;
+  transition-duration: 0.2s;
+  top: 450px;
+  left: 525px;
+}
+#product_info .p_button > a{
+  display: block;
+  color: white;
+}
+#product_info .p_button:hover{
+  background: #000;
+}
+#product_info .p_button:hover > a{
+  color: white;
+}
+
+/* sns */
+#sns_gallery {
+  width: 100%;
+  margin-top: 80px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background-image: url('../images/sns_bg.jpg');
+  background-size: cover;
+  height: 1200px;
+}
+#sns_gallery h2 {
+  padding-top: 150px;
+  padding-bottom: 30px;
+  font-size: 50px;
+  color: #002f5f;
+}
+#sns_gallery .line{
+  width: 100%;
+  height: 3px;
+  background: #ddd;
+  display: inline-block;
+  margin-bottom: 150px;
+}
+#sns_gallery > #sns_photo > li{
+  transition-duration: 0.2s;
+}
+#sns_gallery > #sns_photo > li:hover{  
+  box-sizing: border-box;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+}
+#sns_photo {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#sns_photo li { 
+  float: left;
+  width: 240px; height: 240px;
+  /* outline: 1px solid #bf2428; */
+  overflow: hidden;
+}
+#sns_photo li img {
+  width: 240px;
+  display: block;
+}
+#sns_gallery .icon{
+  padding-top: 60px;
+}
+#sns_gallery .icon a{
+  text-align: center;
+  padding: 10px;
+  /* margin: calc(10% - 100px); */
+  font-size: 30px;
+  color: #55565a;
+}
+
+
+
+/* 푸터 */
+#main_footer {
+  text-align: center;
+  width: 100%;
+  background: #002f5f;
+  height: 180px;
+  color: #fff;
+}
+#main_footer > h1 > img{
+  padding-top: 60px;
+  width: 130px;
+}
+#main_footer > p, #main_footer > address {
+  font-style: normal;
+  font-size: 12px;
+  color: rgb(187, 187, 187);
+  line-height: 30px;
+}
+#main_footer > p{
+  text-align: center;
+}
