@@ -10,11 +10,11 @@ a{text-decoration: none;}
 /* 헤더 */
 #main_header{
   position: fixed;
-  height: 64px;
+  height: 65px;
   width: 100%;
   z-index: 999;
   text-align: center;
-  background: rgba(0,47,95,1);
+  background: #002f5f;
   /* overflow: hidden; */
 
 }
@@ -23,7 +23,6 @@ a{text-decoration: none;}
   position: relative;
   /* outline: 1px solid red; */
   width: 1200px;
-  background: rgba(0,47,95,1);
   padding-top: 20px;
   margin: 0 auto;
 }
@@ -31,7 +30,7 @@ a{text-decoration: none;}
 #main_gnb > .depth1 > li {
   float: left;
   text-align: center;
-  width: 20%;
+  width: 15%;
   line-height: 30px;
   z-index: 999;
 }
@@ -40,27 +39,26 @@ a{text-decoration: none;}
   display: inline-block;
   width: 130px;
   font-size: 17px;
-  color: white;
+  color: #fff;
   transition-duration: 0.2s;
-  border-bottom: 2px solid #002f5f;
   padding-bottom: 12px;
+  border-bottom: 2px solid #002f5f;
 }
 #main_gnb > .depth1 > li > .a_img{
   padding-bottom: 7.5px;
 }
-#main_gnb > .depth1 > li:hover > .a_img{
+#main_gnb > .depth1 > li > a:hover{
+  border-bottom: 2px solid #ccc;
+}
+#main_gnb > .depth1 > li:nth-of-type(1) > a:hover{
   border-bottom: 2px solid #002f5f;
 }
-#main_gnb > .depth1 > li:hover > a{
-  border-bottom: 2px solid rgba(255,255,255,0.5);
-}
-
 /* 2단계 메뉴 */
 #main_gnb .depth2.show {
-  background: rgba(0,47,95,1);
   padding-top: 15px;
   width: 100%;
-  height: 130px;
+  height: 135px;
+  background: #002f5f;
   /* overflow: hidden; */
   z-index: 999;
   /* outline: 1px solid green; */
@@ -73,14 +71,20 @@ a{text-decoration: none;}
 }
 
 #main_gnb .depth2 a {
-  /* outline: 1px solid red; */
   display: block;
-  color: white;
+  color: #fff;
   font-size: 13px;
-  z-index: 999
+  z-index: 999;
+  transition-duration: 0.2s;
 }
 #main_gnb .depth2 a:hover {
   color: #db2340;
+}
+#main_gnb > a{
+  display: block;
+  color: #fff;
+  padding-top: 5px;
+  font-size: 13px;
 }
 
 
@@ -92,7 +96,7 @@ a{text-decoration: none;}
 #company > div{
   position: relative;
   padding: 30px;
-  padding-top: 50px;
+  padding-top: 60px;
 }
 #company li{
   /* display: inline-block; */
@@ -112,7 +116,7 @@ a{text-decoration: none;}
 }
 #company .main_img{
   /* outline: 1px solid red; */
-  padding-top: 20px;
+  padding-top: 35px;
   float: left;
 }
 #company .text{
@@ -121,7 +125,7 @@ a{text-decoration: none;}
   width: 500px;
   height: 950px;
   padding-left: 40px;
-  padding-top: 20px; 
+  padding-top: 50px; 
 }
 #company .text h2{
   color: #002f5f;
@@ -202,7 +206,7 @@ a{text-decoration: none;}
 }
 .part3{
   float: left;
-  margin-top: 95px;
+  margin-top: 150px;
 }
 .part3 .sub_img2{
   float: left;
@@ -217,8 +221,8 @@ a{text-decoration: none;}
 }
 .part4{
   float: right;
-  padding-top: 95px;
-  padding-bottom: 95px;
+  padding-top: 150px;
+  padding-bottom: 200px;
 }
 .part4 .sub_img3{
   float: right;
@@ -237,22 +241,61 @@ a{text-decoration: none;}
 /* 푸터 */
 #main_footer {
   clear: both;
-  text-align: center;
-  width: 100%;
-  background: #002f5f;
-  height: 180px;
-  color: #fff;
-}
-#main_footer > h1 > img{
-  padding-top: 60px;
-  width: 130px;
-}
-#main_footer > p, #main_footer > address {
-  font-style: normal;
-  font-size: 12px;
-  color: rgb(187, 187, 187);
-  line-height: 30px;
-}
-#main_footer > p{
-  text-align: center;
-}
+    text-align: left;
+    width: 100%;
+    background: #002f5f;
+    height: 220px;
+    color: #fff;
+    font-size: 14px;
+  }
+  #main_footer .footer_a{
+    margin: 0 auto;
+    width: 1200px;
+    padding-left: 120px;
+  }
+  #main_footer .footer_a h1 img{
+    float: left;
+    padding-top: 40px;
+    width: 130px;
+    /* opacity: 80%; */
+  }
+  #main_footer .footer_a p{
+    float: left;
+    text-align: left;
+    padding: 20px;
+    padding-left: 0;
+    line-height: 1.7em;
+  }
+  #main_footer .footer_a .icon{
+    padding-top: 40px;
+    float: left;
+    text-align: right;
+    padding-left: 700px;
+    /* width: 1200px;
+    margin-right: 1000px; */
+  }
+  #main_footer .footer_a .icon a{
+    text-align: right;
+    padding: 10px;
+    /* margin: calc(10% - 100px); */
+    font-size: 30px;
+    color: #fff;
+  }
+  #main_footer .footer_b{
+    float: left;
+    margin-top: 30px;
+    position: relative;
+    bottom: 0;
+    clear: both;
+    width: 100%;
+    height: 40px;
+    background: rgb(238, 238, 238);
+    color: #666;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    /* padding-top: 10px; */
+  }
+  #main_footer .footer_b p {
+    padding-top: 0;
+  }

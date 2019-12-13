@@ -5,15 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>메인&lt;Amway</title>
+    <title>Amway</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/lightslider.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/42bc809b80.js" crossorigin="anonymous"></script>
+    <script src="js/lightslider.js"></script>
 </head>
 
 <body>
+    <!-- 레이어 팝업창 -->
+    <div class="popup">
+            <img src="./images/popup.jpg" alt="팝업창">
+            <a href="#">자세히보기</a>
+            <div class="close_box">
+                <button id="btn_close">닫기</button>
+            </div>
+        </div>
+    
+        <script>
+        $(function(){
+            // 팝업창 표시
+            $('.popup').addClass('show');
+    
+            // 닫기 버튼 클릭시 팝업창 종료
+            $('#btn_close').click(function(){
+                $('.popup').removeClass('show');
+            });
+        });
+        </script>
+
     <header id="main_header">
         <div id="main_gnb">
 
@@ -21,6 +44,14 @@
                 <li><a href="index.html" class="a_img"><img src="./images/logo_fff.png" alt="logo" width="80"></a>
                     <ul class="depth2">
                         <li></li>
+                    </ul>
+                </li>
+                <li><a href="page1-1.html">암웨이 소개</a>
+                    <ul class="depth2">
+                        <li><a href="page1-1.html">한국암웨이</a></li>
+                        <li><a href="#">글로벌 암웨이</a></li>
+                        <li><a href="#">사회공헌</a></li>
+                        <li><a href="./page1-3.html">오시는길</a></li>
                     </ul>
                 </li>
                 <li><a href="page1-2.html">쇼핑</a>
@@ -36,16 +67,7 @@
                         <li><a href="#">사업가이드</a></li>
                     </ul>
                 </li>
-            
-            </li>
-            <li><a href="page1-1.html">암웨이 소개</a>
-                <ul class="depth2">
-                    <li><a href="page1-1.html">한국암웨이</a></li>
-                    <li><a href="#">글로벌 암웨이</a></li>
-                    <li><a href="#">사회공헌</a></li>
-                    <li><a href="#">미디어 갤러리</a></li>
-                </ul>
-            </li>
+        
             <li><a href="#">아카데미</a>
                 <ul class="depth2">
                     <li><a href="#">학원소개</a></li>
@@ -54,100 +76,114 @@
                 </ul>
             </li>
             </ul>
+            <a href="#">로그인 / 회원가입</a>
         </div>
     </header>
 
-    <section id="media_zone">
-        <div class="media">
-            <video autoplay loop muted src="./videos/nat.mp4"></video>
+    <div class="m_p">
+        <div class="pp">
+            <h1>우리는 사람을 사람 그 자체로 존중합니다.</h1>
+            <p>사회 · 경제적 지위와 종교의 유무, 정치적 입장과 개인의 신념을 떠나<br> 모든 사람이 각자 소속된 곳에서 성공하고 번영하며 행복할 수 있도록<br> 다방면에서 기여합니다.</p>
         </div>
+    </div>
+
+    <section id="media_zone">
+        <video autoplay loop muted  src="./videos/video.mp4"></video>
     </section>
 
 
     <div id="company_info">
         <div class="company">
             <div class="company_p">
-                <h1><img src="./images/logo_fff.png" width="300" height="100"></h1>
+                <h1><img src="./images/logo_color.png" width="150" alt="logo"></h1>
                 <p>한국 암웨이는 세계 1위 건강기능식품 브랜드 뉴트리라이트(NUTRILITE),<br>코스메틱 브랜드 아티스트리(ARTISTRY)를 포함, 가정 세제류, 가전용품 등<br> 생활관련 제품 1,000여 종을 생산·판매 중입니다.</p>
             </div>
-        <div class="c_imgs">
-            <div class="i_1">
-                <img src="images/po_1.png">
-            </div>
-            <div class="i_2">
-                <img src="images/po_2.png">
-            </div>
-            <div class="i_3">
-                <img src="images/po_3.png">
-            </div>
-            <div class="i_4">
-                <img src="images/po_4.png">
-            </div>
-            <div class="i_5">
-                <img src="images/po_5.png">
-            </div>
-            <div class="i_6">
-                <img src="images/po_6.png">
-            </div>
-            <div class="i_7">
-                <img src="images/po_7.png">
-            </div>
-            <div class="i_8">
-                <img src="images/po_8.png">
-            </div>
-            <div class="i_9">
-                <img src="images/po_9.png">
-            </div>
-            <div class="i_10">
-                <img src="images/po_10.png">
-            </div>
-            <div class="i_11">
-                <img src="images/po_11.png">
-            </div>
-            <div class="i_12">
-                <img src="images/po_12.png">
+
+            <div class="company_photo">
+                <img src="images/company.png" width="300">
             </div>
 
-        </div>
-
-
-
-
-            <div class="c_button">
-                <a href="page1-1.html">자세히 보기</a>
+            <div class="slide-wrap">
+                <div class="slide-content">
+                    <ul class="slider">
+                        <li><img src="images/po_1.png"></li>
+                        <li><img src="images/po_2.png"></li>
+                        <li><img src="images/po_3.png"></li>
+                        <li><img src="images/po_4.png"></li>
+                        <li><img src="images/po_5.png"></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-
-
-    <div id="company_bg">
-        <h1>백그라운드</h1>
     </div>
 
 
     <div id="product_info">
         <div class="product">
             <div class="product_p">
-                <h1>아티스트리 시그니처 셀렉트<br> 브라이트닝 마스크</h1>
-                <p>3중 자연 유래 성분의 이상적
-                피부 표면 투명 광채 케어 마스크<br> 뉴트리라이트 의 화이트 치아씨드 추출물을 함유하여 강력한 파이토 에너지를 선사합니다.</p>
+                <h1>철학은 지키고, <br> 과학은 나아갑니다.</h1>
+                <p>80년이 넘게 꾸준히 사랑받아온 <br> 건강기능식품
+                        뉴트리라이트를 만나보세요.</p>
+            </div>
+            <div class="p_nd">
+                <h1>퍼스널 케어</h1>
+                <p>건강한 미소, 아름다운 머릿결,<br> 탄력있고 촉촉한 피부까지<br>
+                        온가족을 위한 건강하고 세심한<br> 퍼스널 케어를 경험해 보세요.</p>
             </div>
             <div class="product_img">
-                <img width="450" height="450" src="images/product2.png">
-            </div>
-            <div class="p_button">
-                <a href="page1-2.html">자세히 보기</a>
+                <img  src="images/sub-2.png" alt="product">
             </div>
         </div>
     </div>
 
-    <div id="product_bg">
-        <h1>백그라운드</h1>
-    </div>
+    <section id="news">
+            <h2>NEWS <span class="sub_title">Amway 뉴스</span></h2>
+
+            <!-- 좌측배너 -->
+            <aside>
+                    <img src="./images/ba1.jpg" alt="가맹점주 모집">
+                    <img src="./images/ba2.jpg" alt="더카페 아카데미">
+                  </aside>
+                  <!-- 우측 글목록 -->
+                  <div class="news_list">
+                    <h3>Amway 뉴스</h3>
+                    <ul>
+                      <li>
+                        <a href="#">[창업설명회]Amway 12월 정기 창업설명회 안내</a>
+                        <span class="date">2019.12.13</span>
+                      </li>
+                      <li>
+                        <a href="#">한국암웨이, '2019 제 2회 여성 리더십 포럼' 개최</a>
+                        <span class="date">2019.11.12</span>
+                      </li>
+                      <li>
+                        <a href="#">아티스트리 인텐시브 스킨케어 14 출시</a>
+                        <span class="date">2019.10.27</span>
+                      </li>
+                    </ul>
+                    <h3>Amway 공지사항</h3>
+                    <ul>
+                      <li>
+                        <a href="#">[Amway]하반기 마지막! 얼/리/버/드</a>
+                        <span class="date">2019.12.03</span>
+                      </li>
+                      <li>
+                        <a href="#">Amway 월렛 'ABO 디지털 ID카드' 안내</a>
+                        <span class="date">2019.11.25</span>
+                      </li>
+                      <li>
+                        <a href="#">현대카드 승인서버 점검으로 인한 서비스 일시중단 안내</a>
+                        <span class="date">2019.11.03</span>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+
+
+
 
     <section id="sns_gallery">
-        <h2><span class="sub_title">Amway SNS</span></h2>
-        <span class="line"></span>
+        <h2><span class="sub_title">SNS를 통해<br> Amway의 소식을 들어보세요.</span></h2>
         <ul id="sns_photo">
           <li><a target="_blank" href="https://www.instagram.com/amwaykorea/"><img src="./images/sns_1.jpg" alt="뉴트리라이트"></a></li>
           <li><a target="_blank" href="https://www.instagram.com/amwaykorea/"><img src="./images/sns_2.jpg" alt="아티스트리"></a></li>
@@ -160,22 +196,41 @@
           <li><a target="_blank" href="https://www.instagram.com/amwaykorea/"><img src="./images/sns_9.jpg" alt="아티스트리맨"></a></li>
           <li><a target="_blank" href="https://www.instagram.com/amwaykorea/"><img src="./images/sns_10.jpg" alt="글리스터"></a></li>
         </ul>
-        <div class="icon">
-            <a href="https://www.facebook.com/amwaykorea"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/amwaykorea"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-      </section>
+    
+    </section>
 
 
 
 
+
+    <!-- 푸터 -->
     <footer id="main_footer">
-        <h1><img src="./images/logo_fff.png" alt="the cafe"></h1>
-        <p>고객의 소리
-        서울 강남구 압구정로 123 극동스포츠센터 1층
-        Copyright &copy; 2015 Amway, All rights Reserved.</p>
-    </footer>
+            <div class="footer_a">
+            <h1><img src="./images/logo_fff.png" alt="the cafe">
+            </h1>
+            <div class="icon"> <a href="https://www.facebook.com/amwaykorea"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/amwaykorea"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a></div>
+            <p>한국암웨이(주) 서울특별시 강남구 영동대로 517 27층 (삼성동, 아셈타워) <br> (대표이사 : 배수정, 간치응) ㆍ 사업자 등록번호 : 120-81-03391 ㆍ 통신판매신고번호 : 제 강남-1179호호스팅제공자 : 한국암웨이(주) 사업자정보공개페이지암인터넷사이트</p>
+            </div>
+            
+            <div class="footer_b">
+                <p>Copyright &copy; 2015 Amway, All rights Reserved.</p>
+            </div>
+        </footer>
+
+  <script>
+      $(document).ready(function(){
+          $('.slider').lightSlider({
+              mode:'slide',
+              loop:true,
+              auto:true,
+              pager:true,
+              speed:1500,
+              pause:3000
+          });
+      });
+  </script>
 </body>
 
 </html>
