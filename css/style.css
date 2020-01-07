@@ -229,6 +229,9 @@ html, body{
 #news > h2 > span {
   font-size: 24px;
 }
+#news h3 span{
+  color: #002f5f;
+}
 
 /* 섹션 제목 하단 보더 */
 .line {
